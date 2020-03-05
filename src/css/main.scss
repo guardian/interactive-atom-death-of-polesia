@@ -22,9 +22,9 @@ body.header-atom {
         top: 50%;
         left: 50%;
         width: 920px;
-        transform: rotate(-105deg) translate(47%, -52%);
+        transform: rotate(-90deg) translate(41%, -62%);
 
-        @include mq($from: 460px) {
+        @include mq($from: 420px) {
             top: 0;
             left: 0;
             width: 100vw;
