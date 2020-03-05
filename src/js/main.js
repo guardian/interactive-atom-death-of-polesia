@@ -10,6 +10,8 @@ let styleAll = document.querySelectorAll('style');
 let newStyle = styleAll[(styleAll.length - 1)].cloneNode(true);
 parentDoc.body.appendChild(newStyle);
 
+console.log('1744');
+
 // let h = parentDoc.querySelector('.immersive-main-media__headline-container');
 // h.remove();
 
