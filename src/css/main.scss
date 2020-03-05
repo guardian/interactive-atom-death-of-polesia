@@ -1,13 +1,68 @@
 @import "mq";
-@import "fonts";
-@import "palette";
 
-// Uncomment for embeds
-//@import "embed";
-// Uncomment for full screen (including immersive article main media)
-//@import "fullscreen";
+// .element-atom,
+// .interactive-atom {
+//     margin: 0 !important;
+// }
 
-.element-atom,
-.interactive-atom {
+body.header-atom {
     margin: 0 !important;
+    overflow: hidden;
+}
+
+.polesia--header--wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    .img-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 920px;
+        transform: rotate(-105deg) translate(47%, -52%);
+
+        @include mq($from: 460px) {
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            transform: none;
+        }
+    }
+
+}
+
+.immersive-main-media__headline-container {
+    .immersive-main-media__headline-container {
+        margin-top: -6.6rem !important;
+    }
+    .content__main-column,
+    .immersive-main-media__headline-container::after {
+        background-color: #041F4A !important;
+    }
+    .content__headline {
+        font-family: "Guardian Titlepiece", "Guardian Headline Full", "Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+    }
+}
+.immersive-main-media__headline-container::after {
+    background-color: #041F4A !important;
+}
+
+
+body.ios,
+body.android {
+    .tone--special.garnett--type-immersive .article__series {
+        background-color: #ffe500;
+    }
+    .garnett--type-immersive .article__header-info .article__series-copy > a > span {
+        color: #3f464a;
+        font-weight: bold;
+    }
+    .garnett--type-immersive .article__header-info {
+        background-color: #041F4A !important;
+    }
 }

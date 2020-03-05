@@ -3,6 +3,16 @@ var el = document.createElement('script');
 el.src = '<%= path %>/app.js';
 document.body.appendChild(el);
 
+document.body.classList.add('header-atom');
+
+let parentDoc = window.parent.document;
+let styleAll = document.querySelectorAll('style');
+let newStyle = styleAll[1].cloneNode(true);
+parentDoc.body.appendChild(newStyle);
+
+// let h = parentDoc.querySelector('.immersive-main-media__headline-container');
+// h.remove();
+
 
 // THIS IS A .find() Polyfill
 if (!Array.prototype.find) {
