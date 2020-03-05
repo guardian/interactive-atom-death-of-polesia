@@ -17,20 +17,44 @@ body.header-atom {
     bottom: 0;
     right: 0;
     background-color: #000;
-    .img-background {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 920px;
-        transform: rotate(-90deg) translate(41%, -62%);
+    // .img-background {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     width: 920px;
+    //     transform: rotate(-90deg) translate(41%, -62%);
 
-        @include mq($from: 420px) {
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            transform: none;
+    //     @include mq($from: 420px) {
+
+    //         top: 0;
+    //         left: 0;
+    //         width: 100vw;
+    //         height: 100vh;
+    //         object-fit: cover;
+    //         transform: none;
+    //     }
+    // }
+
+    .img-background,
+    .img-background--mobile {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .img-background--mobile {
+        display: block;
+    }
+    .img-background {
+        display: none;
+    }
+    @include mq(tablet) {
+        .img-background--mobile {
+            display: none;
+        }
+        .img-background {
+            display: block;
         }
     }
 

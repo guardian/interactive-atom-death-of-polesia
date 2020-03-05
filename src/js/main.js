@@ -7,7 +7,7 @@ document.body.classList.add('header-atom');
 
 let parentDoc = window.parent.document;
 let styleAll = document.querySelectorAll('style');
-let newStyle = styleAll[1].cloneNode(true);
+let newStyle = styleAll[(styleAll.length - 1)].cloneNode(true);
 parentDoc.body.appendChild(newStyle);
 
 // let h = parentDoc.querySelector('.immersive-main-media__headline-container');
