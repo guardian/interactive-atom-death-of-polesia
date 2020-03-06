@@ -72,6 +72,11 @@ body.header-atom {
         font-family: "Guardian Titlepiece", "Guardian Headline Full", "Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
     }
 }
+
+
+.drop-cap__inner {
+    color: #041F4A;
+}
 .immersive-main-media__headline-container::after {
     background-color: #041F4A !important;
 }
@@ -91,6 +96,6 @@ body.android {
         font-weight: bold;
     }
     .garnett--type-immersive .article__header-info {
-        background-color: #041F4A !important;
+        background-color: #041F4A;
     }
 }
